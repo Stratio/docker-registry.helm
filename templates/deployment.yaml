@@ -207,6 +207,11 @@ spec:
 {{- end }}
         - name: dockerregistry-cleaner
           image: qa.int.stratio.com/stratio/dockerregistry-cleaner:0.1.0-SNAPSHOT
+        - name: dockerregistry-api
+          image: qa.int.stratio.com/stratio/dockerregistry-api:0.1.0-SNAPSHOT
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/registry/
           
 {{- with .Values.extraVolumeMounts }}
             {{- toYaml . | nindent 12 }}
