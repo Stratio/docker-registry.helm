@@ -53,9 +53,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command:
-          - /bin/registry
-          - serve
-          - /etc/docker/registry/config.yml
+          - /bin/sh
+          - /root/start.sh
           ports:
             - containerPort: 5000
 {{- if .Values.metrics.enabled }}
