@@ -206,7 +206,7 @@ spec:
               readOnly: true
 {{- end }}
         - name: dockerregistry-cleaner
-          image: qa.int.stratio.com:8443/stratio/dockerregistry-cleaner:0.1.0-PR90-SNAPSHOT
+          image: qa.int.stratio.com/stratio/dockerregistry-cleaner:0.1.0-SNAPSHOT
         - name: dockerregistry-api
           image: qa.int.stratio.com/stratio/dockerregistry-api:0.1.0-SNAPSHOT
           volumeMounts:
